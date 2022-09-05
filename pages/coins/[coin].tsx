@@ -23,7 +23,10 @@ const CoinPage: NextPage<{
   return (
     <>
       <Head>
-        <title>CryptoNixx | {router.query.coin.toUpperCase()}</title>
+        <title>
+          CryptoNixx |{" "}
+          {router.query.coin ? router.query.coin.toString().toUpperCase() : ""}
+        </title>
         <meta
           name="description"
           content="All the info you need on your favourite crypto currency."

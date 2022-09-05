@@ -27,22 +27,26 @@ const CoinInfo: React.FC<{
         Current Price:
         <span>
           {props.currencySymbol}{" "}
-          {numberWithCommas(
-            props.coinInfo.market_data.current_price[
-              props.currency.toLowerCase()
-            ].toFixed(2)
-          )}
+          {props.currency
+            ? numberWithCommas(
+                props.coinInfo.market_data.current_price[
+                  props.currency.toString().toLowerCase()
+                ].toFixed(2)
+              )
+            : "N/A"}
         </span>
       </h2>
       <h2>
         Market Cap:
         <span>
           {props.currencySymbol}{" "}
-          {numberWithCommas(
-            props.coinInfo.market_data.market_cap[
-              props.currency.toLowerCase()
-            ].toFixed(2)
-          )}
+          {props.currency
+            ? numberWithCommas(
+                props.coinInfo.market_data.market_cap[
+                  props.currency.toString().toLowerCase()
+                ].toFixed(2)
+              )
+            : "N/A"}
         </span>
       </h2>
     </div>

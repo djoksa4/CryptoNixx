@@ -13,8 +13,6 @@ const ChartButtons: React.FC<{ chartDays: ChartDays[] }> = (props) => {
     });
   };
 
-  console.log(router.query.days);
-
   return (
     <div className={classes.chartButtons}>
       {props.chartDays.map((day) => (
