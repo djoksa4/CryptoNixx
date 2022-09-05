@@ -1,0 +1,38 @@
+.cointableRow {
+  &__coinInfo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__symbol {
+    margin: 0;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 800;
+  }
+
+  &__name {
+    margin: 0;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  &__profitable {
+    color: rgb(13, 230, 121);
+  }
+
+  &__nonprofitable {
+    color: red;
+  }
+}
+
+// MOBILE DEVICES
+@media only screen and (max-width: 1000px) {
+  .cointableRow {
+    &__symbol {
+      font-size: 20px;
+    }
+  }
+}

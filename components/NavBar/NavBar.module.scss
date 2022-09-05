@@ -1,0 +1,78 @@
+.navbar {
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  &__container {
+    width: 1500px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+
+    color: gold;
+    font-size: 25px;
+    font-family: "Montserrat";
+    font-weight: 800;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 20px;
+
+    select,
+    option,
+    button {
+      font-family: "Montserrat";
+      font-size: 14px;
+      font-weight: 800;
+      cursor: pointer;
+
+      border-radius: 5px;
+    }
+
+    select {
+      color: white;
+
+      background-color: inherit;
+      padding: 9px 15px;
+
+      border: rgba($color: white, $alpha: 0.5) 1px solid;
+
+      &:hover {
+        border: white 2px solid;
+      }
+      &:focus {
+        border: white 2px solid;
+      }
+    }
+
+    option {
+      background-color: darkgray;
+      padding: 9px 15px;
+    }
+
+    button {
+      color: black;
+
+      background-color: gold;
+      padding: 10px 16px;
+
+      border: gold 2px solid;
+    }
+  }
+}
+
+// MOBILE DEVICES
+@media only screen and (max-width: 1000px) {
+  .navbar {
+    &__logo {
+      font-size: 20px;
+    }
+  }
+}

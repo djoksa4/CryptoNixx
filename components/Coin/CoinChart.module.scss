@@ -1,0 +1,14 @@
+.coinChart {
+  margin-top: 20px;
+}
+
+// MOBILE DEVICES
+@media only screen and (min-width: 1000px) {
+  .coinChart {
+    width: 66%;
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+}

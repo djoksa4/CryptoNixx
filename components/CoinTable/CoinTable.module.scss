@@ -1,0 +1,124 @@
+.cointable {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+
+  &__label {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+
+    font-size: 18px;
+    font-family: "Montserrat";
+    color: darkgray;
+    transition: all 0.1s ease-out;
+
+    &Mini {
+      top: -12px;
+      font-size: 16px;
+      color: white;
+      background-color: #14161a;
+    }
+  }
+
+  h1 {
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: 40px;
+  }
+
+  &__search {
+    position: relative;
+    margin-bottom: 20px;
+
+    input {
+      width: 100%;
+      padding: 15px 10px;
+
+      font-size: 18px;
+      font-family: "Montserrat";
+      color: white;
+      background-color: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 4px;
+      outline: none;
+
+      &:hover {
+        border: 1px solid white;
+      }
+    }
+  }
+
+  &__tableContainer {
+    font-family: "Montserrat";
+
+    table {
+      width: 100%;
+
+      border-collapse: collapse;
+      text-align: left;
+    }
+
+    th {
+      width: 25%;
+      padding: 20px 15px;
+
+      color: black;
+      background-color: gold;
+    }
+
+    td {
+      padding: 20px 15px;
+      border-bottom: rgba(255, 255, 255, 0.3) solid 1px;
+    }
+
+    tr {
+      cursor: pointer;
+      &:hover {
+        background-color: #131111;
+      }
+    }
+  }
+
+  &__pagination {
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    button,
+    div {
+      color: gold;
+    }
+  }
+}
+
+// MOBILE DEVICES
+@media only screen and (max-width: 1000px) {
+  .cointable {
+    h1 {
+      font-size: 25px;
+    }
+
+    &__label {
+      font-size: 15px;
+
+      &Mini {
+        top: -8px;
+        font-size: 13px;
+        color: white;
+        background-color: #14161a;
+      }
+    }
+
+    &__tableContainer {
+      th {
+        padding: 0 15px;
+      }
+      td {
+        padding: 20px 0;
+      }
+    }
+  }
+}

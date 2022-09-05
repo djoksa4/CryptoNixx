@@ -1,0 +1,31 @@
+.bannercarousel {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: "Montserrat";
+  font-size: 18px;
+
+  &__item {
+    cursor: pointer;
+  }
+
+  &__symbolPriceChange {
+    margin-top: 10px;
+
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+
+  &__profitable {
+    color: rgb(13, 230, 121);
+    font-weight: 800;
+  }
+
+  &__nonprofitable {
+    color: red;
+    font-weight: 800;
+  }
+
+  &__currentPrice {
+    font-size: 26px;
+  }
+}
