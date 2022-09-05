@@ -29,7 +29,11 @@ const BannerCarousel: React.FC<{ trendingCoins: CoinData[] }> = (props) => {
     };
 
     return (
-      <Link className={classes.bannercarousel__item} href={coinHref}>
+      <Link
+        className={classes.bannercarousel__item}
+        href={coinHref}
+        key={coin.id}
+      >
         <a>
           <Image src={coin?.image} alt={coin?.name} height="80" width="80" />
 

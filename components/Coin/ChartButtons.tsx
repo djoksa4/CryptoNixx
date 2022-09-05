@@ -19,6 +19,7 @@ const ChartButtons: React.FC<{ chartDays: ChartDays[] }> = (props) => {
     <div className={classes.chartButtons}>
       {props.chartDays.map((day) => (
         <button
+          key={day.value}
           className={
             router.query.days === day.value.toString() ? classes.active : ""
           }

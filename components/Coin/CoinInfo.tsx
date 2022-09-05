@@ -12,7 +12,12 @@ const CoinInfo: React.FC<{
 }> = (props) => {
   return (
     <div className={classes.coinInfo}>
-      <Image src={props.coinInfo.image.large} width="160px" height="160px" />
+      <Image
+        src={props.coinInfo.image.large}
+        alt={props.coinInfo.name}
+        width="160px"
+        height="160px"
+      />
       <h1>{props.coinInfo.name}</h1>
       <p>{parse(props.coinInfo.description.en.split(". ")[0])}.</p>
       <h2>
