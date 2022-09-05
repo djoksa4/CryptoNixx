@@ -1,3 +1,4 @@
+import Head from "next/head";
 import type { GetServerSideProps, NextPage } from "next";
 
 import {
@@ -14,6 +15,13 @@ const HomePage: NextPage<{
 }> = ({ trendingCoinsData, coinListData }) => {
   return (
     <>
+      <Head>
+        <title>CryptoNixx</title>
+        <meta
+          name="description"
+          content="All the info you need on your favourite crypto currency."
+        />
+      </Head>
       <Banner trendingCoins={trendingCoinsData} />
       <CoinTable coinListData={coinListData} />
     </>

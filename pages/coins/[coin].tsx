@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { GetServerSideProps, NextPage } from "next";
 import { useRouter } from "next/router";
 
@@ -20,17 +21,27 @@ const CoinPage: NextPage<{
   const currencySymbol = router.query.currency === "USD" ? "$" : "€";
 
   return (
-    <div className={classes.coinPage}>
-      <CoinInfo
-        coinInfo={props.coinInfo}
-        currency={currency}
-        currencySymbol={currencySymbol}
-      />
-      <CoinChart
-        historicalChartData={props.historicalChartData}
-        currency={currency}
-      />
-    </div>
+    <>
+      <Head>
+        <title>CryptoNixx | {router.query.coin.toUpperCase()}</title>
+        <meta
+          name="description"
+          content="All the info you need on your favourite crypto currency."
+        />
+      </Head>
+
+      <div className={classes.coinPage}>
+        <CoinInfo
+          coinInfo={props.coinInfo}
+          currency={currency}
+          currencySymbol={currencySymbol}
+        />
+        <CoinChart
+          historicalChartData={props.historicalChartData}
+          currency={currency}
+        />
+      </div>
+    </>
   );
 };
 
