@@ -35,7 +35,13 @@ const BannerCarousel: React.FC<{ trendingCoins: CoinData[] }> = (props) => {
         key={coin.id}
       >
         <a>
-          <Image src={coin?.image} alt={coin?.name} height="80" width="80" />
+          <Image
+            src={coin?.image}
+            alt={coin?.name}
+            height="80"
+            width="80"
+            loading="eager"
+          />
 
           <div className={classes.bannercarousel__symbolPriceChange}>
             <span>{coin?.symbol} &nbsp; </span>
