@@ -46,9 +46,11 @@
 
       &:hover {
         border: white 2px solid;
+        margin: -1px;
       }
       &:focus {
         border: white 2px solid;
+        margin: -1px;
       }
     }
 
@@ -57,14 +59,14 @@
       padding: 9px 15px;
     }
 
-    button {
-      color: black;
+    // button {
+    //   color: black;
 
-      background-color: gold;
-      padding: 10px 16px;
+    //   background-color: gold;
+    //   padding: 10px 16px;
 
-      border: gold 2px solid;
-    }
+    //   border: gold 2px solid;
+    // }
   }
 }
 

@@ -31,7 +31,7 @@ const NavBar = () => {
             <option value="USD">USD</option>
             <option value="EUR">EUR</option>
           </select>
-          <button>LOGIN</button>
+          {/* <button>LOGIN</button> */}
         </div>
       </div>
     </div>

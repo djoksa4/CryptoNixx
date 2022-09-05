@@ -15,8 +15,8 @@ const CoinTable: React.FC<{ coinListData: CoinData[] }> = (props) => {
   const handleSearch = () => {
     return props.coinListData.filter(
       (coin) =>
-        coin.name.toLowerCase().includes(searchEntry) ||
-        coin.symbol.toLowerCase().includes(searchEntry)
+        coin.name.toLowerCase().includes(searchEntry.toLowerCase()) ||
+        coin.symbol.toLowerCase().includes(searchEntry.toLowerCase())
     );
   };
 
