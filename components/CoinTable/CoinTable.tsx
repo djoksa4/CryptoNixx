@@ -23,7 +23,7 @@ const CoinTable: React.FC<{ coinListData: CoinData[] }> = (props) => {
   const rows = handleSearch()
     .slice((page - 1) * 10, (page - 1) * 10 + 10)
     .map((coin) => {
-      return <CoinTableRow coin={coin} />;
+      return <CoinTableRow coin={coin} key={coin.id} />;
     });
 
   return (
